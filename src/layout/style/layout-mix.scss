@@ -1,0 +1,247 @@
+.fe-layout-mix {
+  .ant-pro-global-header {
+    background: #303640;
+    box-shadow: none;
+  }
+
+  .ant-layout-header {
+    background: #303640;
+    box-shadow: none;
+  }
+
+  .ant-layout-sider {
+    background: #303640;
+    box-shadow: none;
+  }
+
+  .ant-menu.ant-menu-dark {
+    background: #303640;
+  }
+
+  .ant-menu-dark .ant-menu-inline.ant-menu-sub {
+    background: #303640;
+  }
+
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .ant-menu-item-active {
+    background-color: transparent !important;
+  }
+
+  .ant-menu-inline .ant-menu-item-active {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .ant-menu.ant-menu-dark .ant-menu-item-selected {
+    background-color: transparent;
+  }
+
+  .ant-pro-sider-logo {
+    display: none;
+  }
+
+  .fe-layout-menu-item {
+    font-family: PingFangSC-Regular, sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0;
+    font-weight: 400;
+
+    &:hover {
+      color: #fff !important;
+    }
+  }
+
+  .ant-menu-item-selected .fe-layout-menu-item {
+    color: #fff !important;
+  }
+
+  .ant-menu-item::after {
+    border-bottom: none !important;
+  }
+
+  .fe-layout-menu-submenu {
+    font-family: PingFangSC-Regular, sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0;
+    font-weight: 400;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .fe-layout-menu-submenu-hover .anticon-down {
+    transform: rotate(-180deg);
+    transition-delay: 0s;
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+
+  .ant-menu-submenu-open .fe-layout-menu-submenu {
+    color: #fff;
+  }
+
+  .ant-menu-light .ant-menu-submenu-title:hover {
+    color: #fff;
+  }
+
+  .ant-menu-submenu::after {
+    border-bottom: none !important;
+  }
+
+  .ant-pro-top-nav-header.light .ant-pro-top-nav-header-logo h1 {
+    font-family: MEITUANTYPE-BOLD, sans-serif;
+    font-size: 22px;
+    color: #ffffff;
+    letter-spacing: 0;
+    font-weight: 700;
+    margin: 0 0 0 4px;
+  }
+
+  .ant-pro-basicLayout-content {
+    margin: 0px;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .menu {
+    :global(.anticon) {
+      margin-right: 8px;
+    }
+    :global(.ant-dropdown-menu-item) {
+      min-width: 160px;
+    }
+  }
+
+  .fe-layout-menu-right {
+    display: flex;
+    float: right;
+    margin-left: auto;
+    overflow: hidden;
+
+    span {
+      color: rgba(255, 255, 255, 0.7);
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    a {
+      color: rgba(255, 255, 255, 0.7);
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    .ant-input {
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 4px;
+      background: transparent;
+      color: #fff;
+    }
+
+    .ant-input-affix-wrapper {
+      background-color: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 4px;
+
+      .ant-input {
+        border: none;
+      }
+    }
+
+    .ant-space-item {
+      display: flex;
+    }
+
+    .action {
+      display: flex;
+      align-items: center;
+      padding: 0px 16px 0px 0px;
+      cursor: pointer;
+      transition: all 0.3s;
+      > span {
+        vertical-align: middle;
+      }
+      &:hover {
+        background: $header-hover-bg;
+      }
+      &:global(.opened) {
+        background: $header-hover-bg;
+      }
+    }
+    .search {
+      padding: 0 12px;
+      &:hover {
+        background: transparent;
+      }
+    }
+    .account {
+      .avatar {
+        width: 28px;
+        height: 28px;
+        margin-right: 8px;
+        vertical-align: top;
+        background: rgba(255, 255, 255, 0.85);
+      }
+
+      .name {
+        padding: 0px;
+        font-family: PingFangSC-Regular, sans-serif;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 22px;
+        font-weight: 400;
+      }
+
+      &:hover {
+        .name {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .ant-menu-vertical .ant-menu-submenu-selected {
+    background: #f5f5f5;
+  }
+
+  .ant-menu-submenu-vertical:hover {
+    background: #f5f5f5;
+  }
+
+  .ant-menu-sub .ant-menu-item-only-child:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .ant-menu-submenu-expand-icon,
+  .ant-menu-submenu-arrow {
+    color: #a6a6a6 !important;
+  }
+
+  .ant-menu-submenu:hover > .ant-menu-submenu-title > .ant-menu-submenu-arrow {
+    color: #191919 !important;
+  }
+
+  .fe-user-dropdown {
+    clear: both;
+    margin: 0;
+    padding: 5px 12px;
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    white-space: nowrap;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+}
