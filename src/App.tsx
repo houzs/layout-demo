@@ -22,6 +22,10 @@ function App() {
       name: "欢迎",
     },
     {
+      path: "https://www.meituan.com/",
+      name: "详情",
+    },
+    {
       path: "/admin",
       name: "管理页",
       routes: [
@@ -214,7 +218,7 @@ function App() {
   };
   return (
     <Layout
-      title="Layout"
+      title="交互规范"
       logo="https://mtdui.sankuai.com/mtd/vue/favicon.png?1593345401990"
       headerHeight={headerHeight}
       menuType="menu"
