@@ -445,6 +445,10 @@ $header-background-color: #303640;
   }
 }
 
-.fe-layout-menu-item-children .anticon {
+.ant-tooltip-placement-right .fe-layout-menu-item-children .anticon {
+  display: none;
+}
+
+.ant-menu-inline-collapsed-tooltip .fe-layout-menu-item .anticon {
   display: none;
 }
