@@ -6,6 +6,7 @@ $menu-title-active-color: #fff;
 $menu-title-arrow-color: #a6a6a6;
 $menu-title-arrow-active-color: #191919;
 $menu-active-icon-color: #ffd100;
+$menu-title-size: 14px;
 $header-background-color: #303640;
 
 .fe-layout-side {
@@ -219,7 +220,7 @@ $header-background-color: #303640;
 
   .fe-layout-menu-item {
     font-family: PingFangSC-Regular, sans-serif;
-    font-size: 16px;
+    font-size: $menu-title-size;
     color: $menu-title-color;
     letter-spacing: 0;
     font-weight: 400;

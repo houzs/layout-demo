@@ -1,6 +1,7 @@
 import React from "react";
 import { Space, Radio, Input, notification, Dropdown, Menu } from "antd";
 import * as Icons from "@ant-design/icons";
+import { cloneDeep } from "lodash";
 import Layout from "./layout";
 import logo from "./logo.svg";
 import "./App.css";
@@ -19,15 +20,13 @@ function App() {
     {
       path: "https://www.meituan.com/",
       name: "欢迎",
-      icon: <Icons.SmileOutlined />,
     },
     {
       path: "/admin",
       name: "管理页",
-      icon: <Icons.CrownOutlined />,
       routes: [
         {
-          path: "/admin/sub-page1",
+          path: "/index",
           name: "一级页面",
           icon: <Icons.CrownOutlined />,
         },
@@ -45,7 +44,6 @@ function App() {
     },
     {
       name: "列表页",
-      icon: <Icons.TabletOutlined />,
       path: "/list",
       routes: [
         {
@@ -91,7 +89,6 @@ function App() {
     },
     {
       name: "列表页2",
-      icon: <Icons.TabletOutlined />,
       path: "/list2",
       routes: [
         {
@@ -104,7 +101,6 @@ function App() {
     {
       name: "列表页3",
       path: "/list3",
-      icon: <Icons.TabletOutlined />,
       routes: [
         {
           path: "/list3/sub-page3",
@@ -131,7 +127,7 @@ function App() {
       path: "/list5",
       routes: [
         {
-          path: "/list5/sub-page5",
+          key: "/list5/sub-page5",
           name: "一级列表页面",
           icon: <Icons.CrownOutlined />,
         },
@@ -143,7 +139,7 @@ function App() {
       path: "/list6",
       routes: [
         {
-          path: "/list6/sub-page6",
+          key: "/list6/sub-page6",
           name: "一级列表页面",
           icon: <Icons.CrownOutlined />,
         },
@@ -155,12 +151,12 @@ function App() {
       path: "/list7",
       routes: [
         {
-          path: "/list7/sub-page7",
+          key: "/list7/sub-page7",
           name: "一级列表页面",
           icon: <Icons.CrownOutlined />,
           routes: [
             {
-              path: "/list7/sub-page7/sub-page71",
+              key: "/list7/sub-page7/sub-page71",
               name: "二级列表页面",
               icon: <Icons.CrownOutlined />,
             },
@@ -212,7 +208,6 @@ function App() {
     avatarUrl:
       "https://s3plus.sankuai.com/v1/mss_b2add7e7651e40b8936fed8aabe7cf08/pixel-images-v1/%E5%B0%8F%E5%9B%A2%E5%A4%B4%E5%83%8F_fe4ba721695f2f8.jpeg",
   };
-
   return (
     <Layout
       title="Layout"
@@ -274,7 +269,9 @@ function App() {
           <span>布局方式:</span>
           <Radio.Group
             value={layout}
-            onChange={(e) => setLayout(e.target.value)}
+            onChange={(e) => {
+              setLayout(e.target.value);
+            }}
           >
             <Radio value="top">top(顶导)</Radio>
             <Radio value="side">side(侧导)</Radio>
