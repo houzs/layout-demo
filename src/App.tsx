@@ -26,7 +26,11 @@ function App() {
       name: "管理页",
       routes: [
         {
-          path: "/index",
+          path: `${
+            window.location.host === "houzs.github.io"
+              ? "/layout-demo/index"
+              : "/index"
+          }`,
           name: "一级页面",
           icon: <Icons.CrownOutlined />,
         },
