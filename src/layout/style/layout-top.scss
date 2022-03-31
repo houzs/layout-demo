@@ -1,7 +1,17 @@
+$header-hover-bg: rgba(0, 0, 0, 0.025);
+$menu-sub-title-color: rgba(0, 0, 0, 0.9);
+$menu-sub-hover-color: #f5f5f5;
+$menu-title-color: rgba(255, 255, 255, 0.7);
+$menu-title-active-color: #fff;
+$menu-title-arrow-color: #a6a6a6;
+$menu-title-arrow-active-color: #191919;
+$menu-active-icon-color: #ffd100;
+$header-background-color: #303640;
+
 .fe-layout-top {
   .ant-pro-top-nav-header {
     &.light {
-      background: #303640;
+      background: $header-background-color;
     }
   }
 
@@ -13,20 +23,46 @@
     box-shadow: none;
   }
 
+  .ant-pro-top-nav-header-main-left {
+    min-width: auto;
+    margin-right: 60px;
+  }
+
+  .ant-pro-top-nav-header-logo {
+    min-width: auto;
+  }
+
+  .ant-pro-top-nav-header .anticon {
+    color: $menu-title-color;
+
+    &:hover {
+      color: $menu-title-active-color;
+    }
+  }
+
   .fe-layout-menu-item {
     font-family: PingFangSC-Regular, sans-serif;
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.7) !important;
+    color: $menu-title-color !important;
     letter-spacing: 0;
     font-weight: 400;
 
     &:hover {
-      color: #fff !important;
+      color: $menu-title-active-color !important;
     }
+  }
+
+  .ant-menu-submenu-popup .fe-layout-menu-submenu {
+    color: $menu-sub-title-color !important;
+  }
+
+  .ant-menu-submenu-popup .anticon-down {
+    display: none;
   }
 
   .ant-menu-item-selected .fe-layout-menu-item {
     color: #fff !important;
+    font-weight: 500;
   }
 
   .ant-menu-item::after {
@@ -36,21 +72,21 @@
   .fe-layout-menu-submenu {
     font-family: PingFangSC-Regular, sans-serif;
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.7);
+    color: $menu-title-color;
     letter-spacing: 0;
     font-weight: 400;
 
     &:hover {
-      color: #fff;
+      color: $menu-title-active-color;
     }
   }
 
   .ant-menu-submenu-active .fe-layout-menu-submenu {
-    color: #fff;
+    color: $menu-title-active-color;
   }
 
   .ant-menu-submenu-selected .fe-layout-menu-submenu {
-    color: #fff;
+    color: $menu-title-active-color;
   }
 
   .fe-layout-menu-submenu-hover .anticon-down {
@@ -64,21 +100,21 @@
   .fe-layout-menu-submenu-children {
     font-family: PingFangSC-Regular, sans-serif;
     font-size: 14px;
-    color: rgba(0, 0, 0, 0.9) !important;
+    color: $menu-sub-title-color !important;
   }
 
   .fe-layout-menu-item-children {
     font-family: PingFangSC-Regular, sans-serif;
     font-size: 14px;
-    color: rgba(0, 0, 0, 0.9) !important;
+    color: $menu-sub-title-color !important;
   }
 
   .ant-menu-submenu-open .fe-layout-menu-submenu {
-    color: #fff;
+    color: $menu-title-active-color;
   }
 
   .ant-menu-light .ant-menu-submenu-title:hover {
-    color: #fff;
+    color: $menu-title-active-color;
   }
 
   .ant-menu-submenu::after {
@@ -88,7 +124,7 @@
   .ant-pro-top-nav-header.light .ant-pro-top-nav-header-logo h1 {
     font-family: MEITUANTYPE-BOLD, sans-serif;
     font-size: 22px;
-    color: #ffffff;
+    color: $menu-title-active-color;
     letter-spacing: 0;
     font-weight: 700;
     margin: 0 0 0 4px;
@@ -117,18 +153,18 @@
     overflow: hidden;
 
     span {
-      color: rgba(255, 255, 255, 0.7);
+      color: $menu-title-color;
 
       &:hover {
-        color: #fff;
+        color: $menu-title-active-color;
       }
     }
 
     a {
-      color: rgba(255, 255, 255, 0.7);
+      color: $menu-title-color;
 
       &:hover {
-        color: #fff;
+        color: $menu-title-active-color;
       }
     }
 
@@ -153,7 +189,7 @@
       display: flex;
     }
 
-    .action {
+    .fe-layout-menu-right-action {
       display: flex;
       align-items: center;
       padding: 0px 16px 0px 0px;
@@ -175,7 +211,7 @@
         background: transparent;
       }
     }
-    .account {
+    .fe-layout-menu-right-account {
       .avatar {
         width: 28px;
         height: 28px;
@@ -195,35 +231,35 @@
 
       &:hover {
         .name {
-          color: #fff;
+          color: $menu-title-active-color;
         }
       }
     }
   }
 
   .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
-    background-color: #f5f5f5 !important;
+    background-color: $menu-sub-hover-color !important;
   }
 
   .ant-menu-vertical .ant-menu-submenu-selected {
-    background: #f5f5f5;
+    background: $menu-sub-hover-color;
   }
 
   .ant-menu-submenu-vertical:hover {
-    background: #f5f5f5;
+    background: $menu-sub-hover-color;
   }
 
   .ant-menu-sub .ant-menu-item-only-child:hover {
-    background: #f5f5f5;
+    background: $menu-sub-hover-color;
   }
 
   .ant-menu-submenu-expand-icon,
   .ant-menu-submenu-arrow {
-    color: #a6a6a6 !important;
+    color: $menu-title-arrow-color !important;
   }
 
   .ant-menu-submenu:hover > .ant-menu-submenu-title > .ant-menu-submenu-arrow {
-    color: #191919 !important;
+    color: $menu-title-arrow-active-color !important;
   }
 
   .fe-user-dropdown {

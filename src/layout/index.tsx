@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ProLayout from "@ant-design/pro-layout";
+import "@ant-design/pro-layout/dist/layout.css";
 import { Avatar, Space, Menu, Dropdown, Divider } from "antd";
 import { UserOutlined, DownOutlined } from "@ant-design/icons";
 import * as Icons from "@ant-design/icons";
@@ -107,6 +108,7 @@ const Layout: React.FC<LayoutProps> = (props = {} as LayoutProps) => {
         {...restProps}
         logo={logo ?? null}
         layout={layout}
+        siderWidth={200}
         headerHeight={
           isString(headerHeight) ? HeaderHeight[headerHeight] : headerHeight
         }
@@ -131,11 +133,18 @@ const Layout: React.FC<LayoutProps> = (props = {} as LayoutProps) => {
           },
         }}
         menuItemRender={(menu, dom) => (
+          // eslint-disable-next-line jsx-a11y/anchor-is-valid
           <a
             onClick={() =>
               !menu?.properties?.openNew && setPathname(menu?.path as string)
             }
-            href={menu?.url || null}
+            href={
+              menu.isRoot &&
+              !menu?.properties?.openNew &&
+              (menu?.routes?.length > 0 || menu?.backupRoutes?.length > 0)
+                ? null
+                : menu?.path || menu?.url || null
+            }
             target={menu?.properties?.openNew ? "_blank" : "_self"}
             rel="noreferrer"
             className={classNames({
@@ -207,7 +216,10 @@ const Layout: React.FC<LayoutProps> = (props = {} as LayoutProps) => {
               }
             >
               <span
-                className={classNames("action", "account")}
+                className={classNames(
+                  "fe-layout-menu-right-action",
+                  "fe-layout-menu-right-account"
+                )}
                 style={{
                   height: isString(headerHeight)
                     ? HeaderHeight[headerHeight]
@@ -222,7 +234,12 @@ const Layout: React.FC<LayoutProps> = (props = {} as LayoutProps) => {
                   src={userData?.avatarUrl}
                 />
                 {showUserType === "normal" && (
-                  <span className={classNames("action", "name")}>
+                  <span
+                    className={classNames(
+                      "fe-layout-menu-right-action",
+                      "name"
+                    )}
+                  >
                     {userData?.name}
                   </span>
                 )}

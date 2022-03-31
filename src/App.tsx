@@ -17,35 +17,29 @@ function App() {
 
   const menus = [
     {
-      path: "/welcome",
+      path: "https://www.meituan.com/",
       name: "欢迎",
       icon: <Icons.SmileOutlined />,
-      component: "./Welcome",
     },
     {
       path: "/admin",
       name: "管理页",
       icon: <Icons.CrownOutlined />,
-      access: "canAdmin",
-      component: "./Admin",
       routes: [
         {
           path: "/admin/sub-page1",
           name: "一级页面",
           icon: <Icons.CrownOutlined />,
-          component: "./Welcome",
         },
         {
           path: "/admin/sub-page2",
           name: "二级页面",
           icon: <Icons.CrownOutlined />,
-          component: "./Welcome",
         },
         {
           path: "/admin/sub-page3",
           name: "三级页面",
           icon: <Icons.CrownOutlined />,
-          component: "./Welcome",
         },
       ],
     },
@@ -53,7 +47,6 @@ function App() {
       name: "列表页",
       icon: <Icons.TabletOutlined />,
       path: "/list",
-      component: "./ListTableList",
       routes: [
         {
           path: "/list/sub-page",
@@ -64,19 +57,23 @@ function App() {
               path: "sub-sub-page1",
               name: "一一级列表页面",
               icon: <Icons.CrownOutlined />,
-              component: "./Welcome",
             },
             {
               path: "sub-sub-page2",
               name: "一二级列表页面",
               icon: <Icons.CrownOutlined />,
-              component: "./Welcome",
+              routes: [
+                {
+                  path: "sub-sub-page2223",
+                  name: "一三级列表页面",
+                  icon: <Icons.CrownOutlined />,
+                },
+              ],
             },
             {
               path: "sub-sub-page3",
               name: "一三级列表页面",
               icon: <Icons.CrownOutlined />,
-              component: "./Welcome",
             },
           ],
         },
@@ -84,13 +81,126 @@ function App() {
           path: "/list/sub-page2",
           name: "二级列表页面",
           icon: <Icons.CrownOutlined />,
-          component: "./Welcome",
         },
         {
           path: "/list/sub-page3",
           name: "三级列表页面",
           icon: <Icons.CrownOutlined />,
-          component: "./Welcome",
+        },
+      ],
+    },
+    {
+      name: "列表页2",
+      icon: <Icons.TabletOutlined />,
+      path: "/list2",
+      routes: [
+        {
+          path: "https://www.meituan.com/",
+          name: "一级列表页面",
+          icon: <Icons.CrownOutlined />,
+        },
+      ],
+    },
+    {
+      name: "列表页3",
+      path: "/list3",
+      icon: <Icons.TabletOutlined />,
+      routes: [
+        {
+          path: "/list3/sub-page3",
+          name: "一级列表页面",
+          icon: <Icons.CrownOutlined />,
+        },
+      ],
+    },
+    {
+      name: "列表页4",
+      icon: <Icons.TabletOutlined />,
+      path: "/list4",
+      routes: [
+        {
+          path: "/list4/sub-page4",
+          name: "一级列表页面",
+          icon: <Icons.CrownOutlined />,
+        },
+      ],
+    },
+    {
+      name: "列表页5",
+      icon: <Icons.TabletOutlined />,
+      path: "/list5",
+      routes: [
+        {
+          path: "/list5/sub-page5",
+          name: "一级列表页面",
+          icon: <Icons.CrownOutlined />,
+        },
+      ],
+    },
+    {
+      name: "列表页6",
+      icon: <Icons.TabletOutlined />,
+      path: "/list6",
+      routes: [
+        {
+          path: "/list6/sub-page6",
+          name: "一级列表页面",
+          icon: <Icons.CrownOutlined />,
+        },
+      ],
+    },
+    {
+      name: "列表页7",
+      icon: <Icons.TabletOutlined />,
+      path: "/list7",
+      routes: [
+        {
+          path: "/list7/sub-page7",
+          name: "一级列表页面",
+          icon: <Icons.CrownOutlined />,
+          routes: [
+            {
+              path: "/list7/sub-page7/sub-page71",
+              name: "二级列表页面",
+              icon: <Icons.CrownOutlined />,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "列表页8",
+      icon: <Icons.AccountBookOutlined />,
+      path: "/list8",
+      routes: [
+        {
+          path: "/list8/sub-page888",
+          name: "一级列表页面",
+          icon: <Icons.CrownOutlined />,
+        },
+      ],
+    },
+    {
+      name: "列表页9",
+      icon: <Icons.TabletOutlined />,
+      path: "/list9",
+      routes: [
+        {
+          path: "/list9/sub-page9",
+          name: "一级列表页面",
+          icon: <Icons.CrownOutlined />,
+        },
+      ],
+    },
+    {
+      name: "列表页10",
+      icon: <Icons.TabletOutlined />,
+      path: "/list10",
+      routes: [
+        {
+          path: "/list10/sub-page10",
+          name: "一级列表页面",
+          icon: <Icons.CrownOutlined />,
         },
       ],
     },
@@ -150,7 +260,7 @@ function App() {
         }}
         direction="vertical"
       >
-        <Space direction="horizontal">
+        {/* <Space direction="horizontal">
           <span>header高度:</span>
           <Radio.Group
             value={headerHeight}
@@ -159,7 +269,7 @@ function App() {
             <Radio value="default">default(48px)</Radio>
             <Radio value="large">large(60px)</Radio>
           </Radio.Group>
-        </Space>
+        </Space> */}
         <Space direction="horizontal">
           <span>布局方式:</span>
           <Radio.Group
@@ -183,14 +293,14 @@ function App() {
             </Radio>
           </Radio.Group>
         </Space>
-        <Space direction="horizontal">
+        {/* <Space direction="horizontal">
           <span>点击logo跳转路径:</span>
           <Input
             placeholder="跳转路径"
             value={rootUrl}
             onChange={(e) => setRootUrl(e.target.value)}
           />
-        </Space>
+        </Space> */}
       </Space>
     </Layout>
   );
